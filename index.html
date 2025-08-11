@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mrholden</title>
+  <link rel="stylesheet" href="Main.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a onclick="showSection('games')">Games</a>
+      <a onclick="showSection('about')">About</a>
+    </nav>
+    <div class="title">Mrholden</div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h1>About Me</h1>
+      <p>Hi, I’m Mrholden. I create games and share them on my Itch.io page.
+         You can find fun projects, experiments, and unique gameplay ideas in my collection.</p>
+    </section>
+
+    <section id="games" class="hidden">
+      <h1>My Games</h1>
+      <a class="game-link" href="https://mrholdendev.itch.io/drivingblitz" target="_blank" rel="noopener noreferrer">Driving Blitz</a>
+      <a class="game-link" href="https://mrholdendev.itch.io/mars" target="_blank" rel="noopener noreferrer">MARS</a>
+      <a class="game-link" href="https://mrholdendev.itch.io/roll-a-ball" target="_blank" rel="noopener noreferrer">Roll a Ball</a>
+    </section>
+  </main>
+
+  <script>
+    function showSection(id) {
+      document.getElementById('about').classList.add('hidden');
+      document.getElementById('games').classList.add('hidden');
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
